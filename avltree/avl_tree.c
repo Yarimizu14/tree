@@ -22,7 +22,7 @@ int_fast8_t bias(node* n) {
     return subtree_height(n->left) - subtree_height(n->right);
 };
 
-node* new_node(int val) {
+node* new_node(int_fast16_t val) {
     node* n = malloc(sizeof(node));
     n->value = val;
     n->height = 0;
@@ -63,7 +63,7 @@ node *rotateLeft(node* root) {
     return new_root;
 };
 
-node *insert(node* n, int val) {
+node *insert(node* n, int_fast16_t val) {
     if (n == NULL)
         return new_node(val);
 
